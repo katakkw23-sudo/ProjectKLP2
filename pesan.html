@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Sekarang - GulaKopi</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pesan.css">
+</head>
+<body>
+
+   
+    <!-- NAVBAR -->
+    <header class="container navbar">
+
+        <div class="logo">
+            <img src="gambar/logo.png" alt="Logo GulaKopi">
+            <h2>GulaKopi</h2>
+        </div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="menu.html" ">Menu</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="pesan.html" class="nav-button active">Pesan Sekarang</a>
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="order-hero">
+        <div class="hero-text">
+            <p class="eyebrow">GULAKOPI • FRESH EVERY DAY</p>
+            <h1>Pesan<br>Sekarang</h1>
+            <p>Nikmati kopi favoritmu dengan mudah dan cepat!</p>
+            <a href="#pilih-menu" class="hero-link">Mulai Pesan ↓</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="gambar/hero2.png" alt="Minuman kopi GulaKopi" />
+        </div>
+    </section>
+
+    <!-- MAIN ORDER -->
+    <main class="order-container">
+
+        <div class="order-layout">
+
+            <!-- PILIH MENU -->
+            <section class="order-card menu-selection" id="pilih-menu">
+                <h2> Pilih Menu</h2>
+
+                <div class="product-grid">
+
+                    <article class="product-card ">
+                        <img src="gambar/guko.png" alt="Es Guko">
+                        <h3>Es Guko</h3>
+                        <p>Rp 40.000</p>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="gambar/mochaccino.png" alt="Mochaccino">
+                        <h3>Mochaccino</h3>
+                        <p>Rp 50.000</p>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="gambar/steak.png" alt="Chicken Steak">
+                        <h3>Chicken Steak</h3>
+                        <p>Rp 91.000</p>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="gambar/frenchtoast.png" alt="Strawberry French Toast">
+                        <h3>Strawberry French Toast</h3>
+                        <p>Rp 56.000</p>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="gambar/strwbrymatcha.png" alt="Strawberry Matcha">
+                        <h3>Strawberry Matcha</h3>
+                        <p>Rp 37.000</p>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="gambar/taro.png" alt="Taro Latte">
+                        <h3>Taro Latte</h3>
+                        <p>Rp 25.000</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- DETAIL PESANAN -->
+            <section class="order-card order-summary" id="pesanan">
+                <h2> Detail Pesanan</h2>
+
+                <div class="summary-product">
+                    <img src="gambar/guko.png" alt="Es Guko">
+
+                    <div class="summary-info">
+                        <h3>Es Guko</h3>
+                        <p>Rp 40.000</p>
+
+                        <div class="quantity">
+                            <button type="button">−</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                        </div>
+                    </div>
+
+                    <button class="delete-button" type="button">🗑</button>
+                </div>
+
+                <div class="summary-details">
+                    <div>
+                        <span>Subtotal</span>
+                        <strong>Rp 18.000</strong>
+                    </div>
+
+                    <div>
+                        <span>Ongkos Kirim</span>
+                        <strong>Rp 8.000</strong>
+                    </div>
+
+                    <div class="total-price">
+                        <span>Total</span>
+                        <strong>Rp 26.000</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMASI PENGIRIMAN -->
+            <section class="order-card delivery-card">
+                <h2> Informasi Pengiriman</h2>
+
+                <form class="delivery-form">
+
+                    <input
+                        type="text"
+                        placeholder="Nama Lengkap"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        placeholder="Alamat Lengkap"
+                        required
+                    >
+
+                    <div class="delivery-row">
+                        <input
+                            type="tel"
+                            placeholder="Nomor HP"
+                            required
+                        >
+
+                        <select required>
+                            <option value="">Metode Pengiriman</option>
+                            <option>Ambil di Tempat</option>
+                            <option>Kurir</option>
+                        </select>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- METODE PEMBAYARAN -->
+            <section class="order-card payment-card">
+                <h2> Metode Pembayaran</h2>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment" checked>
+                    <span></span>
+                    Transfer Bank
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment">
+                    <span></span>
+                    E-Wallet (OVO, DANA, GoPay)
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="payment">
+                    <span></span>
+                    COD (Bayar di Tempat)
+                </label>
+            </section>
+
+        </div>
+
+        <!-- TOMBOL PESAN -->
+        <div class="order-action">
+            <button type="button" class="order-button">
+                 Pesan Sekarang <span>→</span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="order-footer">
+        <div class="footer-brand">
+            <h2> GulaKopi</h2>
+            <p>Kopi Enak, Mood Naik!</p>
+        </div>
+
+        <div class="footer-feature">
+            <span></span>
+            <div>
+                <strong>Pengiriman</strong>
+                <p>Sesuai pilihan layanan</p>
+            </div>
+        </div>
+
+        <div class="footer-feature">
+            <span></span>
+            <div>
+                <strong>Pembayaran</strong>
+                <p>Aman dan mudah</p>
+            </div>
+        </div>
+
+        <div class="footer-feature">
+            <span></span>
+            <div>
+                <strong>Customer Service</strong>
+                <p>Siap membantu</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
