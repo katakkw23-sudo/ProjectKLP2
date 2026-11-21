@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pilih menu favorit dan lakukan pemesanan di GulaKopi.">
     <title>Pesan Sekarang - GulaKopi</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pesan.css">
 </head>
 <body>
 
-   
-    <!-- NAVBAR -->
     <header class="container navbar">
-
-        <div class="logo">
+        <div class="logo d-flex">
             <img src="gambar/logo.png" alt="Logo GulaKopi">
             <h2>GulaKopi</h2>
         </div>
 
-        <nav>
+        <nav class="d-flex">
             <a href="index.html">Beranda</a>
-            <a href="menu.html" ">Menu</a>
+            <a href="menu.html">Menu</a>
             <a href="tentang.html">Tentang Kami</a>
             <a href="pesan.html" class="nav-button active">Pesan Sekarang</a>
         </nav>
-
     </header>
 
-    <!-- HERO -->
-    <section class="order-hero">
+    <section class="order-hero d-flex">
         <div class="hero-text">
             <p class="eyebrow">GULAKOPI • FRESH EVERY DAY</p>
             <h1>Pesan<br>Sekarang</h1>
@@ -38,22 +34,18 @@
         </div>
 
         <div class="hero-image">
-            <img src="gambar/hero2.png" alt="Minuman kopi GulaKopi" />
+            <img src="gambar/hero2.png" alt="Minuman kopi GulaKopi">
         </div>
     </section>
 
-    <!-- MAIN ORDER -->
     <main class="order-container">
+        <div class="order-layout d-grid">
 
-        <div class="order-layout">
-
-            <!-- PILIH MENU -->
             <section class="order-card menu-selection" id="pilih-menu">
-                <h2> Pilih Menu</h2>
+                <h2>Pilih Menu</h2>
 
-                <div class="product-grid">
-
-                    <article class="product-card ">
+                <div class="product-grid d-grid">
+                    <article class="product-card">
                         <img src="gambar/guko.png" alt="Es Guko">
                         <h3>Es Guko</h3>
                         <p>Rp 40.000</p>
@@ -88,126 +80,103 @@
                         <h3>Taro Latte</h3>
                         <p>Rp 25.000</p>
                     </article>
-
                 </div>
             </section>
 
-            <!-- DETAIL PESANAN -->
             <section class="order-card order-summary" id="pesanan">
-                <h2> Detail Pesanan</h2>
+                <h2>Detail Pesanan</h2>
 
-                <div class="summary-product">
+                <div class="summary-product d-flex">
                     <img src="gambar/guko.png" alt="Es Guko">
 
                     <div class="summary-info">
                         <h3>Es Guko</h3>
                         <p>Rp 40.000</p>
 
-                        <div class="quantity">
-                            <button type="button">−</button>
+                        <div class="quantity d-flex">
+                            <button type="button" aria-label="Kurangi jumlah">−</button>
                             <span>1</span>
-                            <button type="button">+</button>
+                            <button type="button" aria-label="Tambah jumlah">+</button>
                         </div>
                     </div>
 
-                    <button class="delete-button" type="button">🗑</button>
+                    <button class="delete-button" type="button" aria-label="Hapus pesanan">🗑</button>
                 </div>
 
                 <div class="summary-details">
-                    <div>
+                    <div class="d-flex">
                         <span>Subtotal</span>
-                        <strong>Rp 18.000</strong>
+                        <strong>Rp 40.000</strong>
                     </div>
 
-                    <div>
+                    <div class="d-flex">
                         <span>Ongkos Kirim</span>
                         <strong>Rp 8.000</strong>
                     </div>
 
-                    <div class="total-price">
+                    <div class="total-price d-flex">
                         <span>Total</span>
-                        <strong>Rp 26.000</strong>
+                        <strong>Rp 48.000</strong>
                     </div>
                 </div>
             </section>
 
-            <!-- INFORMASI PENGIRIMAN -->
             <section class="order-card delivery-card">
-                <h2> Informasi Pengiriman</h2>
+                <h2>Informasi Pengiriman</h2>
 
                 <form class="delivery-form">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="text" placeholder="Alamat Lengkap" required>
 
-                    <input
-                        type="text"
-                        placeholder="Nama Lengkap"
-                        required
-                    >
-
-                    <input
-                        type="text"
-                        placeholder="Alamat Lengkap"
-                        required
-                    >
-
-                    <div class="delivery-row">
-                        <input
-                            type="tel"
-                            placeholder="Nomor HP"
-                            required
-                        >
+                    <div class="delivery-row d-grid">
+                        <input type="tel" placeholder="Nomor HP" required>
 
                         <select required>
                             <option value="">Metode Pengiriman</option>
-                            <option>Ambil di Tempat</option>
-                            <option>Kurir</option>
+                            <option value="ambil">Ambil di Tempat</option>
+                            <option value="kurir">Kurir</option>
                         </select>
                     </div>
-
                 </form>
             </section>
 
-            <!-- METODE PEMBAYARAN -->
             <section class="order-card payment-card">
-                <h2> Metode Pembayaran</h2>
+                <h2>Metode Pembayaran</h2>
 
-                <label class="payment-option">
-                    <input type="radio" name="payment" checked>
+                <label class="payment-option d-flex">
+                    <input type="radio" name="payment" value="transfer" checked>
                     <span></span>
                     Transfer Bank
                 </label>
 
-                <label class="payment-option">
-                    <input type="radio" name="payment">
+                <label class="payment-option d-flex">
+                    <input type="radio" name="payment" value="ewallet">
                     <span></span>
                     E-Wallet (OVO, DANA, GoPay)
                 </label>
 
-                <label class="payment-option">
-                    <input type="radio" name="payment">
+                <label class="payment-option d-flex">
+                    <input type="radio" name="payment" value="cod">
                     <span></span>
                     COD (Bayar di Tempat)
                 </label>
             </section>
-
         </div>
 
-        <!-- TOMBOL PESAN -->
-        <div class="order-action">
-            <button type="button" class="order-button">
-                 Pesan Sekarang <span>→</span>
+        <div class="order-action d-flex">
+            <button type="button" class="order-button d-flex">
+                Pesan Sekarang <span>→</span>
             </button>
         </div>
-
     </main>
 
-    <!-- FOOTER -->
-    <footer class="order-footer">
+    <footer class="order-footer d-grid">
         <div class="footer-brand">
-            <h2> GulaKopi</h2>
+            <h2>GulaKopi</h2>
             <p>Kopi Enak, Mood Naik!</p>
         </div>
 
-        <div class="footer-feature">
+        <div class="footer-feature d-flex">
             <span></span>
             <div>
                 <strong>Pengiriman</strong>
@@ -215,7 +184,7 @@
             </div>
         </div>
 
-        <div class="footer-feature">
+        <div class="footer-feature d-flex">
             <span></span>
             <div>
                 <strong>Pembayaran</strong>
@@ -223,7 +192,7 @@
             </div>
         </div>
 
-        <div class="footer-feature">
+        <div class="footer-feature d-flex">
             <span></span>
             <div>
                 <strong>Customer Service</strong>
